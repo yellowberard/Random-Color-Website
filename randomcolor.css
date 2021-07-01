@@ -1,4 +1,8 @@
-h1{ color: red
-    dispaly= flex;
+h1{ 
+    display:flex;
+    justify-content: center;
+}
+#random{
+    ddisplay:flex;
     justify-content: center;
 }
