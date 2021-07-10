@@ -3,6 +3,7 @@ const h = document.querySelector('h1');
 const gradcolor = document.querySelector('#gradc');
 const buttoncolor = document.querySelector('.brndm')
 
+// to generate random color
 const rndmcolor = () => {
 
     let rgb = [1, 1, 1];
@@ -12,12 +13,14 @@ const rndmcolor = () => {
 
     return rgb;
 }
+// To Check contrast of the text
 const checkContrast = (tcolor) => {
     const textc = Math.floor(((parseInt(tcolor[0]) * 255) + (parseInt(tcolor[1]) * 255) + (parseInt(tcolor[2]) * 255)) / 765);
     const textColour = (textc > 96) ? 'black' : 'white';
     return textColour;
 }
 
+//For Random Background color
 colour.addEventListener('click', function () {
     const tempcolor = rndmcolor();
     const newcolor = `rgb(${tempcolor[0]},${tempcolor[1]},${tempcolor[2]})`;
@@ -28,7 +31,7 @@ colour.addEventListener('click', function () {
     buttoncolor.style.background = "white";
 
 });
-
+//For Random gradient background
 gradcolor.addEventListener('click', function () {
     const tempcolor = rndmcolor();
     const tempcolor2 = rndmcolor();
@@ -45,7 +48,7 @@ gradcolor.addEventListener('click', function () {
     h.style.color = "black";
     buttoncolor.style.background = "white";
 });
-
+// For random button background
 buttoncolor.addEventListener('click', function () {
     const tempcolor = rndmcolor();
     const newcolor = `rgb(${tempcolor[0]},${tempcolor[1]},${tempcolor[2]})`;
