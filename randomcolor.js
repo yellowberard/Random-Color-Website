@@ -9,13 +9,16 @@ const rndmcolor = () => {
 
     return rgb;
 }
-
+const checkContrast = (tcolor) => {
+    const textc = Math.floor(((parseInt(tcolor[0]) * 255) + (parseInt(tcolor[1]) * 255) + (parseInt(tcolor[2]) * 255)) / 765);
+    const textColour = (textc > 96) ? 'black' : 'white';
+    return textColour;
+}
 colour.addEventListener('click', function () {
-    const newcolor = rndmcolor();
-    const newc = `rgb(${newcolor[0]},${newcolor[1]},${newcolor[2]})`;
-    const textc = Math.floor(((parseInt(newcolor[0]) * 299) + (parseInt(newcolor[1]) * 587) + (parseInt(newcolor[2]) * 114)) / 1000);
-    const textColour = (textc > 125) ? 'black' : 'white';
-    document.body.style.backgroundColor = newc;
-    h.style.color = textColour;
+    const tempcolor = rndmcolor();
+    const newcolor = `rgb(${tempcolor[0]},${tempcolor[1]},${tempcolor[2]})`;
+    const textcolor = checkContrast(tempcolor);
+    document.body.style.backgroundColor = newcolor;
+    h.style.color = textcolor;
     h.innerText = `THE COLOR IS: ${newcolor}`;
 });
