@@ -10,7 +10,7 @@ User can have rgb value random color and can see how  a color would look on back
 <li>Javascript</li>
 </ul>
 <h3> Link for website</h3>
- https://yellowberard.github.io/Random-Color-Website/
+ https://yellowberard.github.io/Random-Color-Website/randomcolor.html
 <h3>How to run the project</h3><br>
 Running the project is easy.The user only have to press the button and a random color would be generated.<br>
 Here Are Some Pictures:-<br>
